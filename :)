@@ -23,7 +23,7 @@ function Library:Create(table)
 
     local main = Instance.new("Frame")
     main.Name = "main"
-    main.BackgroundColor3 = Color3.fromRGB(28, 28, 28)
+    main.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
     main.Position = UDim2.fromScale(0.244, 0.292)
     main.Size = UDim2.fromOffset(488, 299)
 
