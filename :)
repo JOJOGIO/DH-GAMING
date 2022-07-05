@@ -23,7 +23,7 @@ function Library:Create(table)
 
     local main = Instance.new("Frame")
     main.Name = "main"
-    main.BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+    main.BackgroundColor3 = Color3.fromRGB(0, 0, 0)
     main.Position = UDim2.fromScale(0.244, 0.292)
     main.Size = UDim2.fromOffset(488, 299)
 
@@ -519,20 +519,7 @@ function Library:Create(table)
         end)
         game:GetService('TweenService'):Create(game.CoreGui['dark_UI'].main:FindFirstChild('tabContainer'):FindFirstChildWhichIsA('TextButton'), TweenInfo.new(0.3), {TextTransparency = 0}):Play()
     end)
-
-    spawn(function()
-        if table.StartupSound.Toggle and table.StartupSound.SoundID ~= nil then
-            local sound = Instance.new('Sound', game.CoreGui)
-            sound.Name = "Startup Sound"
-            sound.SoundId = "rbxassetid://6958727243"
-            sound.Volume = 1.5
-            sound.TimePosition = table.StartupSound.TimePosition
-            sound:Play()
-            sound.Stopped:Wait()
-            sound:Destroy()
-        end
-    end)
-
+    
     return tabHandler
 end
 
